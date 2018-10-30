@@ -1,0 +1,1 @@
+var Vec2=function(){function t(t,i){void 0===t&&(t=0),void 0===i&&(i=0),this.x=t,this.y=i}return t.prototype.set=function(t,i){this.x=t,this.y=i},t.prototype.setTo=function(t){this.x=t.x,this.y=t.y},t.prototype.setNormal=function(t,i){var o=t.y-i.y,s=i.x-t.x,r=Math.sqrt(o*o+s*s);if(r<Number.MIN_VALUE)return this.x=o,void(this.y=s);var n=1/r;this.x=o*n,this.y=s*n},t}();

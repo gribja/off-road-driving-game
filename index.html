@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset=utf8>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        	<link rel="manifest" href="manifest.json">
+<meta name="HandheldFriendly" content="True">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="CrazyDriving">
+<meta name="apple-mobile-web-app-title" content="CrazyDriving">
+<meta name="theme-color" content="#ffa550">
+<meta name="msapplication-navbutton-color" content="#ffa550">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="index.html">  
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link rel="icon" type="image/png" sizes="48x48" href="img/icon-48.png">
+<link rel="apple-touch-icon" type="image/png" sizes="48x48" href="img/icon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="img/icon-96.png">
+<link rel="apple-touch-icon" type="image/png" sizes="96x96" href="img/icon-96.png">
+<link rel="icon" type="image/png" sizes="144x144" href="img/icon-144.png">
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="img/icon-144.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+        <title>Off-road Driving</title>
+        <link rel="stylesheet" href="src/game.css"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    </head>
+    <body>
+        <div id=container>
+            <canvas id=canvas width=960 height=540></canvas>
+            <div id=load>
+                <h1>Loading</h1>
+            </div>
+            <div id=home>
+                <h1>Off-road Driving</h1>
+                <p>
+                    <b>How to play:</b><br>
+                    🌟 Click or tap anywhere on the screen<br>
+                    🌟 Drag up and down to shape the road<br>
+                    🌟 Don't crash into dangerous obstacles<br>
+                </p>
+                <div id=start>NEW GAME</div>
+                <div id=menu>
+                    <input type=checkbox class=opt id=m checked><label for=m> Music</label><br>
+                    <input type=checkbox class=opt id=s checked><label for=s> Sound FX</label><br>
+                </div>
+            </div>
+            <div id=end style=display:none>
+                <h1>Game Over<br><small>Distance traveled: <span id="dist">12 km</span></small></h1>
+                <p>
+                    <b>Nice try!</b><br>
+                    <small>Success is commemorated; failure merely remembered</small><br>
+                </p>
+                <div id=reset>PLAY AGAIN</div>
+            </div>
+        </div>
+       <script src="src/aaudio.js"></script>
+        <script src="src/initialize.js"></script>
+       <script src="src/sprites.js"></script>
+        <script src="src/game.js"></script>
+       <script src="src/vec2.js"></script>
+        <script src="src/pointer.js"></script>
+        <script src="src/columns.js"></script>
+        <script src="src/player.js"></script>
+       <script src="src/paint.js"></script>
+        <script src="src/danger.js"></script>
+        <script src="src/mainloop.js"></script>
+       <script src="src/run.js"></script>
+      <script>
+		if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('src/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
+    </body>
+</html>
