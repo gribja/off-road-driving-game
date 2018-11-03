@@ -24,7 +24,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
 <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="img/icon-192.png">
         <title>Off-road Driving</title>
-        <link rel="stylesheet" href="src/game.css"/>
+        <link rel="stylesheet" href="dist/game.css"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     </head>
     <body>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div id=end style=display:none>
-                <h1>Game Over<br><small>Distance traveled: <span id="dist">12 km</span></small></h1>
+                <h1>Game Over<br><small>Distance traveled: <span id="src">12 km</span></small></h1>
                 <p>
                     <b>Nice try!</b><br>
                     <small>Success is commemorated; failure merely remembered</small><br>
@@ -56,22 +56,22 @@
                 <div id=reset>PLAY AGAIN</div>
             </div>
         </div>
-       <script src="src/aaudio.js"></script>
-        <script src="src/initialize.js"></script>
-       <script src="src/sprites.js"></script>
-        <script src="src/game.js"></script>
-       <script src="src/vec2.js"></script>
-        <script src="src/pointer.js"></script>
-        <script src="src/columns.js"></script>
-        <script src="src/player.js"></script>
-       <script src="src/paint.js"></script>
-        <script src="src/danger.js"></script>
-        <script src="src/mainloop.js"></script>
-       <script src="src/run.js"></script>
+       <script src="dist/aaudio.js"></script>
+        <script src="dist/initialize.js"></script>
+       <script src="dist/sprites.js"></script>
+        <script src="dist/game.js"></script>
+       <script src="dist/vec2.js"></script>
+        <script src="dist/pointer.js"></script>
+        <script src="dist/columns.js"></script>
+        <script src="dist/player.js"></script>
+       <script src="dist/paint.js"></script>
+        <script src="dist/danger.js"></script>
+        <script src="dist/mainloop.js"></script>
+       <script src="dist/run.js"></script>
       <script>
 		if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('src/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
       // Registration was successful
       console.log('ServiceWorker registration successful with scope: ', registration.scope);
     }, function(err) {
